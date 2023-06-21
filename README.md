@@ -7,5 +7,5 @@ The UI is made using streamlit library and the backend functionality is done usi
     
 ### Setp-1 : `git clone https://github.com/Parth-G27/Stock_Explore.git`
 ### Setp-2 : Change the directory to cloned repo.  
-            For windows : ```cd .\Stock_Explore\```
+            For Windows : `cd .\Stock_Explore\`
 ### Setp-3 : Activate the virtual enviroment by `env\Scripts\activate`
