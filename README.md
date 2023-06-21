@@ -6,3 +6,6 @@ The UI is made using streamlit library and the backend functionality is done usi
 ## How to setup & run 
     
 ### Setp-1 : `git clone https://github.com/Parth-G27/Stock_Explore.git`
+### Setp-2 : Change the directory to cloned repo. 
+`cd Stock_Explore`
+### Setp-1 : `git clone https://github.com/Parth-G27/Stock_Explore.git`
