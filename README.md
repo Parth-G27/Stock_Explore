@@ -6,11 +6,11 @@ The UI is made using streamlit library and the backend functionality is done usi
 ## How to Setup & Run 
     
 ### Step-1 : `git clone https://github.com/Parth-G27/Stock_Explore.git`
-### Step-2 : Change the directory to cloned repo. For Windows : `cd .\Stock_Explore\`
-### Step-3 : Activate the virtual enviroment by `env\Scripts\activate`
-### Step-4 : Install all the requirements by `pip install -r requirement.txt` 
-### Step-5 : Run the code inhe terminal using `streamlit run stream.py`
+### Step-2 : Change the directory to the cloned repository. For Windows : `cd .\Stock_Explore\`
+### Step-3 : Activate the virtual enviroment for the repository by `env\Scripts\activate` inthe terminal.
+### Step-4 : Install all the requirements by `pip install -r requirement.txt` .
+### Step-5 : Run the code in the terminal using `streamlit run stream.py` .
 
 ## Bugs pending 
 - data.py line number 24-39
-- Currently running on MongoDB Localhost. Required a MongoDB Cluster string 
+- Currently running on MongoDB Localhost. Required a MongoDB Cluster string .
