@@ -7,7 +7,7 @@ sns.set_theme()
 
 # change the connection string
 client = pymongo.MongoClient(
-    "mongodb+srv://parth3_mongo:parthdb48@cluster1.sqvug29.mongodb.net/")
+    "mongodb+srv")
 print(client)
 db = client['Stock_Explore']  # crypto --> Stock_Explore
 collection_btc = db['btc']
