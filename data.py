@@ -1,13 +1,15 @@
-import pymongo 
+import pymongo
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+import regex as re
 sns.set_theme()
 
-client = pymongo.MongoClient("mongodb://localhost:27017/")
+# change the connection string
+client = pymongo.MongoClient(
+    "mongodb+srv://parth3_mongo:parthdb48@cluster1.sqvug29.mongodb.net/")
 print(client)
-db = client['crypto']
+db = client['Stock_Explore']  # crypto --> Stock_Explore
 collection_btc = db['btc']
 collection_eth = db['eth']
 cursor_btc = collection_btc.find()
@@ -21,9 +23,15 @@ df_eth = pd.DataFrame(entries_eth)
 # print(df_btc)
 # print(df_eth)
 
-btc_time=pd.DataFrame(df_btc['Date'])
-eth_time=pd.DataFrame(df_eth['Date'])
-
+# ---------------------------------------------------
+btc_time = pd.DataFrame(df_btc['Date'])
+eth_time = pd.DataFrame(df_eth['Date'])
+btc_time['Date']=resub(r"-","/",btc_time['Date'])
+eth_time['Date']=resub(r"-","/",eth_time['Date'])
+btc_time['Date'] = btc_time['Date'].astype('datetime64[ns]')
+eth_time['Date'] = eth_time['Date'].astype('datetime64[ns]')
+df_btc['Close'] = df_btc['Close'].astype('Float32')
+df_eth['Close'] = df_eth['Close'].astype('Float32')
 print(btc_time['Date'])
 # print(eth_time['Date'])
 
@@ -32,8 +40,14 @@ print(df_btc['Close'])
 
 print('stage')
 
-plt.plot(btc_time['Date'],df_btc['Close'])
+plt.plot(btc_time['Date'], df_btc['Close'])
 # plt.plot(eth_time['Date'],df_eth['Close'])
 plt.show()
 
 print('Running ....')
+
+# ---------------------------------------------------
+
+# DD/MM/YYYY
+
+# DD-MM-YYYY
